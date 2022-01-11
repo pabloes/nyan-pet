@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "outDir": "out",
+        "module": "commonjs",
+        "lib": ["es6", "DOM"],
+        "allowJs": true,
+        "target": "es2015",
+        "declaration": true,
+        "noImplicitAny": false,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "esModuleInterop": true
+    },
+    "transpileOnly":true,
+    "include": [
+      "server.ts"
+    ]    
+}
