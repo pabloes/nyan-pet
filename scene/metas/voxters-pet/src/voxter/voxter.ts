@@ -1,4 +1,4 @@
-const availableModels = [0,2, 9, 13, 10055, 10056, 10057];
+const availableModels = [0,2, 9, 13, 10055, 10056, 10057, 10063];
 
 const shapes = availableModels.reduce((acc:any, catId)=>{
   const shape = new GLTFShape(`metas/voxters-pet/models/${catId}.glb`);
