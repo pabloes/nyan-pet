@@ -18,7 +18,7 @@ require('dotenv').config();
 const port = Number(process.env.PORT || 2567);
 const app = express();
 
-app.use(cors({}));
+app.use(cors({origin:true}));
 app.use(express.json());
 
 const gameServer = new Server({
