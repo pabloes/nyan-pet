@@ -31,7 +31,7 @@ export const getUserNyanCats = async ({hasConnectedWeb3, publicKey}) => {
 }
 
 export async function getBalance(publicKey, contract){
-    return await contract.methods.balanceOf(publicKey).vall()
+    return await contract.methods.balanceOf(publicKey).call()
 }
 
 async function getIds (publicKey, contract, nyanCatIds) {
