@@ -16,8 +16,7 @@ export const getUserNyanCats = async ({hasConnectedWeb3, publicKey}) => {
     if(hasConnectedWeb3){
         const nyanIds = await getIds(publicKey, nyanContract, nyanCatIds)
         const hasNyanAoki = (await getIds(publicKey, aokiContract, [1])).length;
-        const hasHazy = getBalance(publicKey, hazyContract);
-        console.log("hasHazy",hasHazy);
+        const hasHazy = await getBalance(publicKey, hazyContract);
         const result = [...nyanIds];
         if(hasNyanAoki){
             result.push(10058);
