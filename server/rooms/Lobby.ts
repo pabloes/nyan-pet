@@ -23,6 +23,7 @@ class SupporterPlayer extends Schema {
     @type('string')
     name;
 
+    @type(["number"])
     tokenIds;
 
     publicKey:string;
@@ -31,7 +32,7 @@ class SupporterPlayer extends Schema {
         super();
         this.tokenId = tokenId;
         this.name = name;
-        this.tokenIds = tokenIds;
+        this.tokenIds = new ArraySchema<number>(...tokenIds);
         this.publicKey = publicKey;
     }
 }
