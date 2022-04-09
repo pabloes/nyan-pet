@@ -6,7 +6,8 @@
     "noLib": false,
     "paths": {
       "colyseus.js": [
-        "node_modules/colyseus.js/dist/colyseus.d.ts"
+        "node_modules/colyseus.js/dist/colyseus.d.ts",
+        "node_modules\\colyseus.js\\dist\\colyseus.d.ts"
       ]
     },
     "baseUrl": "."

@@ -82,7 +82,7 @@ export class VoxtersLobby extends Room<State> {
             const selectedCatId = Number(~userNyanCats.indexOf(defaultCatID)
                 ? defaultCatID
                 : userNyanCats[0]);
-            console.log("userNyanCats", userNyanCats, selectedCatId);
+
             client.send('hasVoxter', selectedCatId);
             choiceMap[publicKey] = selectedCatId;
             this.state.supporters.set(client.sessionId, new SupporterPlayer(selectedCatId, displayName, userNyanCats, publicKey));
