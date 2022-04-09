@@ -17,6 +17,7 @@ export const getUserNyanCats = async ({hasConnectedWeb3, publicKey}) => {
         const nyanIds = await getIds(publicKey, nyanContract, nyanCatIds)
         const hasNyanAoki = (await getIds(publicKey, aokiContract, [1])).length;
         const hasHazy = await getBalance(publicKey, hazyContract);
+        console.log("hasHazy",hasHazy);
         const result = [...nyanIds];
         if(hasNyanAoki){
             result.push(10058);
@@ -31,7 +32,7 @@ export const getUserNyanCats = async ({hasConnectedWeb3, publicKey}) => {
 }
 
 export async function getBalance(publicKey, contract){
-    return await contract.methods.balanceOf(publicKey).call()
+    return await contract.methods.balanceOf(publicKey).call();
 }
 
 async function getIds (publicKey, contract, nyanCatIds) {
