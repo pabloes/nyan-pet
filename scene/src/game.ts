@@ -1,6 +1,9 @@
 import {initializeVoxtersPet} from "../metas/voxters-pet/src/voxters-pet";
 
-initializeVoxtersPet();
+try{
+    initializeVoxtersPet();
+}catch(err){}
+
 
 const root = new Entity();
 engine.addEntity(root);
