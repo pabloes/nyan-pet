@@ -18,8 +18,9 @@ export const initializeVoxtersPet = async () => {
     const realm = (await getCurrentRealm())?.displayName;
     const {cid, land} = await getParcel();
     const {sceneJsonData} = land;    
-    const PROD = !~(realm||'').indexOf(`localhost`);
-    const WS_HOST = PROD?`wss://mana-fever.com/nyan-pet/`:`ws://localhost:2567`;
+    const PROD = true;//!~(realm||'').indexOf(`localhost`);
+    const WS_HOST = PROD?`wss://mana-fever.com/nyan-pet`:`ws://localhost:2567`;
+
     const client = new Client(`${WS_HOST}`);
     const room:any = await client.joinOrCreate('nyan-lobby',{
         realm,

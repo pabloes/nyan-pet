@@ -10,7 +10,7 @@ const web3 = new Web3(`https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY
 const nyanContract = new web3.eth.Contract(nyanAbi as any, nyanAddress);
 const aokiContract = new web3.eth.Contract(nyanAbi as any, aokiNyanAddress);
 const hazyContract = new web3.eth.Contract(hazyAbi as any, hazyAddress);
-const nyanCatIds = [2,13,12,10023,10054,19,10026,9,10022,10021,7,17,20,10024,10,52552,219,576,10055,10056,10057, 10058,10063,10065, 52552];
+const nyanCatIds = [2, 7, 9, 10, 12, 13, 17, 19, 20, 219, 576, 10021, 10022, 10023, 10024, 10026, 10054, 10055, 10056, 10057, 10058, 10063, 10065, 52552];
 
 export const getUserNyanCats = async ({hasConnectedWeb3, publicKey}) => {
     if(hasConnectedWeb3){
